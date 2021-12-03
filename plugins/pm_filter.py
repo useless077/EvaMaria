@@ -427,6 +427,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption=f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
+        buttons = [
+            [
+                InlineKeyboardButton('More Bots 🤩', url='https://t.me/TamilBots/84'),
+                InlineKeyboardButton('Update Channel 🥳', url='https://t.me/TamilBots')
+            ]
+            ]
+                
             
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
@@ -440,6 +447,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption
+                    reply_markup=InlineKeyboardMarkup(buttons)
                     )
                 await query.answer('Check PM, I have sent files in pm',show_alert = True)
         except UserIsBlocked:
