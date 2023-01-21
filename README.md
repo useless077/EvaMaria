@@ -15,7 +15,7 @@
 [![Sparkline](https://stars.medv.io/EvamariaTG/EvaMaria.svg)](https://stars.medv.io/EvamariaTG/EvaMaria)
 
 
-## Features
+### Features
 
 - [x] Auto Filter
 - [x] Manual Filter
